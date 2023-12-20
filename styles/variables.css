@@ -1,21 +1,30 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --main_font:'Inter', sans-serif;
-    --accent_font:'PressStart2P';
-    --main_font_weight: 400;
-    --title_font_weight: 700;
-    --background_color:#FFFFFF;
-    --accent_color:#000;
-    --gradient_repeat_color_theme_light:#d3d3d3;
-    --gradient_color_first_theme_light:#e7e7e7;
-    --gradient_color_second_theme_light:#1a1a1a;
-    --background-image:  
-    repeating-linear-gradient(90deg,
-    var(--gradient_repeat_color_theme_light) 0 2px,
-    transparent 2px 4px),  repeating-linear-gradient(0deg, var(--gradient_repeat_color_theme_light) 0 2px, transparent 2px 4px), 
-    linear-gradient(var(--gradient_color_first_theme_light), var(--gradient_color_second_theme_light));
-    --stroke_color:#fff; 
-    --button_color: var(--background_color);
-    --like_color:#FF0000;
-    /* --main_text_color_light:#000; */
+  --main_font: "Inter", sans-serif;
+  --accent_font: "PressStart2P";
+  --main_font_weight: 400;
+  --title_font_weight: 700;
+  --background_color: #ffffff;
+  --accent_color: #000;
+  --gradient_repeat_color_theme_light: #d3d3d3;
+  --gradient_color_first_theme_light: #e7e7e7;
+  --gradient_color_second_theme_light: #1a1a1a;
+  --background-image: repeating-linear-gradient(
+      90deg,
+      var(--gradient_repeat_color_theme_light) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      var(--gradient_repeat_color_theme_light) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--gradient_color_first_theme_light),
+      var(--gradient_color_second_theme_light)
+    );
+  --stroke_color: #fff;
+  --button_color: var(--background_color);
+  --like_color: #ff0000;
+  /* --main_text_color_light:#000; */
 }
