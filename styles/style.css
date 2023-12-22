@@ -186,7 +186,7 @@
   right: 25px;
   font-family: var(--accent_font);
   font-size: 14px;
-  font-weight: var(--main_font_weight);
+  font-variation-settings: "wght" var(--main_font_weight);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: 0 1px var(--background_color), 1px 0 var(--background_color),
@@ -211,7 +211,7 @@
   font-size: 18px;
   font-family: var(--main_font);
   font-weight: var(--main_font_weight);
-  padding: 21px 25px 26px;
+  padding: 25px;
   border-top: 2px solid var(--accent_color);
 }
 
@@ -388,6 +388,7 @@
     width: 198px;
   }
   .label {
+    top:22px;
     right: 11px;
   }
   .dialog_button {
