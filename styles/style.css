@@ -34,7 +34,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: var(--accent_font);
+  font-family: var(--accent_font, fantasy);
   outline: 2px solid var(--accent_color);
   padding-top: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   padding-left: clamp(0.87rem, -1.4751rem + 10.0056vw, 7.53rem);
@@ -63,13 +63,21 @@
   font-size: 14px;
   line-height: normal;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
-.theme-menu__button:disabled,
+.theme-menu__button:disabled {
+  position: relative;
+  opacity: 0.6;
+  transition: opacity ease 0.3s;
+  cursor: default;
+}
+
 .theme-menu__button:hover {
   position: relative;
   opacity: 0.6;
   transition: opacity ease 0.3s;
+  
 }
 .theme-menu__button:disabled::before {
   content: "▶";
@@ -79,6 +87,7 @@
   height: 13px;
   position: absolute;
   margin-left: -21px;
+  
 }
 
 .theme-menu__button::after {
@@ -90,6 +99,7 @@
   background-color: var(--accent_color);
   transition: width 0.3s;
   opacity: 0.6;
+  
 }
 
 .theme-menu__button:focus-visible::after {
@@ -184,7 +194,7 @@
   text-transform: uppercase;
   top: 25px;
   right: 25px;
-  font-family: var(--accent_font);
+  font-family: var(--accent_font, fantasy);
   font-size: 14px;
   font-variation-settings: "wght" var(--main_font_weight);
   opacity: 0.5;
@@ -209,7 +219,7 @@
 .card_text {
   line-height: 21px;
   font-size: 18px;
-  font-family: var(--main_font);
+  font-family: var(--main_font, sans-serif);
   font-weight: var(--main_font_weight);
   padding: 25px;
   border-top: 2px solid var(--accent_color);
@@ -223,6 +233,7 @@
   background-color: transparent;
   border: none;
   position: relative;
+  cursor: pointer;
 }
 .card__like-button {
   align-self: end;
@@ -237,17 +248,19 @@
   z-index: 0;
   background-color: var(--background_color);
   margin-left: 7px;
+  
 }
 
 .card__like-button:focus,
-.save_button:focus {
+.save_button:focus,
+.dialog_button:focus {
   box-shadow: 3px 3px 0 0 var(--accent_color);
   transition: box-shadow ease 0.3s;
 }
 
 .card__like-button::after,
 .save_button::after,
-.dialog__button::after {
+.dialog_button::after {
   content: "";
   position: absolute;
   display: block;
@@ -260,7 +273,7 @@
 }
 .button__text {
   font-weight: var(--main_font_weight);
-  font-family: var(--accent_font);
+  font-family: var(--accent_font, fantasy);
   font-size: 14px;
   line-height: 12.5px;
   mix-blend-mode: difference;
@@ -271,7 +284,7 @@
 }
 .card__like-button:hover::after,
 .save_button:hover::after,
-.dialog__button:hover::after {
+.dialog_button:hover::after{
   transform: scaleX(1);
 }
 .button_area {
@@ -288,6 +301,7 @@
   background-color: transparent;
   border: none;
   transition: outline 0.3s ease;
+  cursor: pointer;
 }
 
 .card__icon-button:focus-visible {
@@ -322,8 +336,12 @@
   background-color: rgb(0 0 0 / 0.75);
 }
 
-.dialog {
+.dialog[open] {
   padding: 0px;
+  width:357px;
+  background-color: var(--background_color);
+  border:none;
+  outline: 2px solid var(--accent_color);
 }
 .dialog_content {
   display: flex;
@@ -334,20 +352,29 @@
   width: 39px;
   height: 39px;
   margin-right: 20px;
-  color: var(--button_color);
-  mix-blend-mode: difference;
+  color: var(--accent_color);
   position: relative;
   z-index: 1;
   overflow: visible;
 }
 .dialog_text {
-  font-family: var(--accent_font);
+  font-family: var(--accent_font, fantasy);
   text-transform: uppercase;
   font-size: 14px;
+  color: var(--accent_color);
 }
 .dialog_text_width {
   width: 234px;
   line-height: 150%;
+}
+.dialog_confirm{
+ color: var(--button_color); 
+ font-family: var(--accent_font, fantasy);
+ text-transform: uppercase;
+ font-size: 14px;
+ mix-blend-mode: difference;
+ position: relative;
+  z-index: 1;
 }
 .dialog_button {
   outline: 2px solid var(--accent_color);
@@ -359,6 +386,7 @@
   align-items: center;
   margin: 0px auto 30px;
 }
+
 
 @media (width <= 378px) {
   .header,
@@ -393,6 +421,9 @@
   }
   .dialog_button {
     width: 257px;
+  }
+  .dialog {
+    width: 341px;
   }
 }
 
