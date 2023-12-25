@@ -284,7 +284,7 @@
 }
 .card__like-button:hover::after,
 .save_button:hover::after,
-.dialog_button:hover::after{
+.dialog_button:hover::after {
   transform: scaleX(1);
 }
 .button_area {
@@ -367,8 +367,8 @@
   width: 234px;
   line-height: 150%;
 }
-.dialog_confirm{
- color: var(--button_color); 
+.dialog_confirm {
+ color: var(--button_color);
  font-family: var(--accent_font, fantasy);
  text-transform: uppercase;
  font-size: 14px;
